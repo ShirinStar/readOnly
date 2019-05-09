@@ -1,0 +1,32 @@
+{
+  "name": "readOnly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "model.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodeman": "^1.1.2",
+    "pg": "^7.10.0",
+    "sequelize": "^5.8.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "resetDb": "node resetDb.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShirinStar/readOnly.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShirinStar/readOnly/issues"
+  },
+  "homepage": "https://github.com/ShirinStar/readOnly#readme"
+}

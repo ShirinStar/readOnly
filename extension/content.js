@@ -1,7 +1,13 @@
 window.onload = function(){
   alert('fuck off')
 
-  const firstTry = document.querySelectorAll('tr');
+  const emails = document.querySelectorAll('tr');
+  console.log(emails);
 
-  console.log(firstTry);
+  function openEmail() {
+    console.log('click');
+  }
+
+  emails.forEach(email => email.addEventListener('click', openEmail));
+
 };

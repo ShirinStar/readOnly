@@ -4,11 +4,11 @@ window.onload = function(){
   const titleNode = document.querySelector('title');
   console.log(titleNode);
   // Options for the observer (which mutations to observe)
-  var config = { attributes: true, childList: true, subtree: true };
+  cost config = { attributes: true, childList: true, subtree: true };
 
   // Callback function to execute when mutations are observed
-  var callback = function(mutationsList, observer) {
-      for(var mutation of mutationsList) {
+  cost callback = function(mutationsList, observer) {
+      for(let mutation of mutationsList) {
           if (mutation.type == 'childList') {
               console.log('A child node has been added or removed.');
               console.log(titleNode);
@@ -20,7 +20,7 @@ window.onload = function(){
   };
 
   // Create an observer instance linked to the callback function
-  var observer = new MutationObserver(callback);
+  const observer = new MutationObserver(callback);
 
   // Start observing the target node for configured mutations
   observer.observe(titleNode, config);

@@ -1,13 +1,27 @@
 window.onload = function(){
   alert('fuck off')
 
-  const emails = document.querySelectorAll('tr');
-  console.log(emails);
+  const titleNode = document.querySelector('title');
+  console.log(titleNode);
+  // Options for the observer (which mutations to observe)
+  cost config = { attributes: true, childList: true, subtree: true };
 
-  function openEmail() {
-    console.log('click');
-  }
+  // Callback function to execute when mutations are observed
+  cost callback = function(mutationsList, observer) {
+      for(let mutation of mutationsList) {
+          if (mutation.type == 'childList') {
+              console.log('A child node has been added or removed.');
+              console.log(titleNode);
+          }
+          else if (mutation.type == 'attributes') {
+              console.log('The ' + mutation.attributeName + ' attribute was modified.');
+          }
+      }
+  };
 
-  emails.forEach(email => email.addEventListener('click', openEmail));
+  // Create an observer instance linked to the callback function
+  const observer = new MutationObserver(callback);
 
+  // Start observing the target node for configured mutations
+  observer.observe(titleNode, config);
 };

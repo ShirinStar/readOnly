@@ -24,8 +24,4 @@ window.onload = function(){
 
   // Start observing the target node for configured mutations
   observer.observe(titleNode, config);
-
-  // Later, you can stop observing
-
-  console.log(firstTry);
 };

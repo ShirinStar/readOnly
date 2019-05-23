@@ -10,14 +10,19 @@ window.onload = function(){
   const callback = function(mutationsList, observer) {
       for(let mutation of mutationsList) {
           if (mutation.type == 'childList') {
-              console.log('A child node has been added or removed.');
               console.log(titleNode);
+              if (titleNode.includes('inbox')) {
+
+              }
           }
           else if (mutation.type == 'attributes') {
               console.log('The ' + mutation.attributeName + ' attribute was modified.');
           }
       }
   };
+
+  //const soup = new JSSoup(document);
+  //console.log(soup);
 
   const observer = new MutationObserver(callback);
 

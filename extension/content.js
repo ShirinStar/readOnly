@@ -1,24 +1,27 @@
+console.log(patterns);
+
 window.onload = function(){
   alert('fuck off')
 
   // Options for the observer (which mutations to observe)
   const config = { attributes: true, childList: true, subtree: true };
   const titleNode = document.querySelector('title');
-
+  console.log(titleNode, titleNode.innerText.match(emailPattern)[0]);
   // Callback function to execute when mutations are observed
   const callback = function(mutationsList, observer) {
     const titlesHTML = document.querySelectorAll('span.bqe')
     const emailTitles = new Set(Array.from(titlesHTML).map(title => title.innerText))
-    console.log(emailTitles);
     for(let mutation of mutationsList) {
       if (mutation.type == 'childList') {
         emailTitles.forEach(title => {
           if (titleNode.innerText.includes(title)) {
-            console.log('yo');
-            const body = document.body.innerText.toLowerCase()
-            if (body.includes('unfortunately')) {
-              console.log('we did it');
-            }
+            console.log('new email opened');
+            const body = document.body.innerText
+            patterns.forEach(pattern =>{
+              if(!!body.match(pattern)) {
+                console.log("ha ha you got rejected");
+              }
+            })
           }
         })
         //console.log(body);

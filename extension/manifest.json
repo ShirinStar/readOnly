@@ -5,6 +5,10 @@
   "content_scripts": [
     {
       "matches": ["https://mail.google.com/mail/*", "http://mail.google.com/mail/*"],
+      "js": ["words.js"]
+    },
+    {
+      "matches": ["https://mail.google.com/mail/*", "http://mail.google.com/mail/*"],
       "js": ["content.js"]
     }
   ]

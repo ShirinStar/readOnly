@@ -6,10 +6,13 @@
 - digging inside the dom of the gmail
 - title inbox
 
-## step 2
+## step 2: done ✅ 
 - fix email titles in order to work better within pages. 
 - start writing Regex patterns, finding Match - ["array of patterns for rejections"]
+- sending an email -> we grab the email pattern from title
 
 ## step 3
-- sending text msg -> when did we ask for the phone no?
-- integrating API generator memes
+- wbepack as we are working with npm package: https://www.npmjs.com/package/sendmail
+- check how it actually works with the chrome with the extension.
+- integrating API generator memes https://rapidapi.com/ronreiter/api/meme-generator?utm_source=mashape&utm_medium=301
+- working on custom ecourging texts

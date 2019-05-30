@@ -16,3 +16,4 @@
 - check how it actually works with the chrome with the extension.
 - integrating API generator memes https://rapidapi.com/ronreiter/api/meme-generator?utm_source=mashape&utm_medium=301
 - working on custom ecourging texts
+- check the pop-up thing instead of email and depend on intensity of the word matching 

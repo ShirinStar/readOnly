@@ -1,20 +1,18 @@
 window.onload = function(){
   alert('fuck off')
 
-  const titleNode = document.querySelector('title');
-  const titlesHTML = document.querySelectorAll('span.bqe')
-  const emailTitles = new Set(Array.from(titlesHTML).map(title => title.innerText))
-  console.log(emailTitles);
-  console.log(titleNode);
   // Options for the observer (which mutations to observe)
   const config = { attributes: true, childList: true, subtree: true };
+  const titleNode = document.querySelector('title');
 
   // Callback function to execute when mutations are observed
   const callback = function(mutationsList, observer) {
+    const titlesHTML = document.querySelectorAll('span.bqe')
+    const emailTitles = new Set(Array.from(titlesHTML).map(title => title.innerText))
+    console.log(emailTitles);
     for(let mutation of mutationsList) {
       if (mutation.type == 'childList') {
         emailTitles.forEach(title => {
-          console.log(title);
           if (titleNode.innerText.includes(title)) {
             console.log('yo');
             const body = document.body.innerText.toLowerCase()

@@ -1,0 +1,3 @@
+[submodule "modern-webpack-starter"]
+	path = modern-webpack-starter
+	url = https://github.com/johndatserakis/modern-webpack-starter.git
